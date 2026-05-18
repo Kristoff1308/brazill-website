@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events & Festivals - Discover Brazil</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="images/flag.jpg" alt="Brazil Flag">
+        <h2>Discover Brazil</h2>
+    </div>
+    <a href="login.html" class="login-btn" id="accountBtn">Login</a>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="states.html">States</a></li>
+        <li><a href="events.html">Events & Festivals</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<section class="events-page">
+    <div class="events-hero">
+        <h1>Events & Festivals in Brazil</h1>
+        <p>Choose your travel dates and discover festivals happening during your stay.</p>
+    </div>
+    <div class="events-card">
+        <div class="events-filter">
+            <div>
+                <label>From</label>
+                <input type="date" id="fromDate">
+            </div>
+            <div>
+                <label>To</label>
+                <input type="date" id="toDate">
+            </div>
+            <button id="searchEventsBtn">Search Events</button>
+            <button id="showAllBtn" class="secondary-btn">Show All</button>
+        </div>
+        <div class="table-wrapper">
+            <table class="events-table">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="eventsTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<script src="js/main.js"></script>
+<script src="js/events.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="css/contact.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you!</p>
+</header>
+<div class="container contact-container">
+    <form id="contactForm" class="contact-form">
+        <div class="mb-3">
+            <label>Full Name</label>
+            <input type="text" id="name" class="form-control">
+            <div class="error" id="nameError"></div>
+        </div>
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" id="email" class="form-control">
+            <div class="error" id="emailError"></div>
+        </div>
+        <div class="mb-3">
+            <label>Phone</label>
+            <input type="tel" id="phone" class="form-control">
+            <div class="error" id="phoneError"></div>
+        </div>
+        <div class="mb-3">
+            <label>Message</label>
+            <textarea id="message" class="form-control" rows="4"></textarea>
+            <div class="error" id="messageError"></div>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+        <div class="success-msg" id="successMsg"></div>
+    </form>
+</div>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2>Thank You!</h2>
+        <p>Thank you for your message. We reply very shortly.</p>
+        <button id="closePopup">Close</button>
+    </div>
+</div>
+<section class="return-home-section">
+    <a href="index.html" class="return-home-btn"> Return Home</a>
+</section>
+<script src="js/contact.js"></script>
+</body>
+</html>

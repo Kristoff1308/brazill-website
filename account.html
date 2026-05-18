@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:rgb(15, 197, 46);
+    color:rgb(10, 9, 9);
+}
+header{
+    background:#1f2937;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+.logo h2{
+    margin:0;
+    font-size:32px;
+    color:white;
+}
+section{
+    padding:70px 20px;
+    text-align:center;
+}
+.account-card{
+    max-width:500px;
+    margin:0 auto;
+    background:white;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+#profileAvatar{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #070707;
+    margin-bottom:15px;
+}
+#userInfo{
+    font-size:22px;
+    margin-bottom:30px;
+    font-weight:bold;
+    color:#0a0909;
+}
+.upload-form{
+    margin-bottom:30px;
+}
+.upload-form label{
+    font-size:18px;
+    font-weight:bold;
+    display:block;
+    margin-bottom:12px;
+}
+.upload-form input{
+    margin-bottom:18px;
+}
+.upload-form button{
+    padding:12px 28px;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
+    background:#009739;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+}
+.upload-form button:hover{
+    background:#007f30;
+}
+#logoutBtn{
+    padding:16px 45px;
+    font-size:24px;
+    font-weight:bold;
+    color:white;
+    background:#da1c2c;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+    transition:0.3s ease;
+    box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
+#logoutBtn:hover{
+    background:#c11212;
+    transform:scale(1.05);
+}
+#logoutBtn:active{
+    transform:scale(0.97);
+}
+.homeBtn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 35px;
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+    background:#0a0db1;
+    text-decoration:none;
+    border-radius:14px;
+    transition:0.3s ease;
+    box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
+.homeBtn:hover{
+    background:#06832c;
+    transform:scale(1.05);
+}
+.custom-upload{
+    display:block;
+    width:200px;
+    text-align:center;
+    padding:12px 24px;
+    background:#009739;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:10px;
+    cursor:pointer;
+    margin:0 auto 18px auto;
+    transition:0.3s ease;
+}
+.custom-upload:hover{
+    background:#007f30;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h2>My Account</h2>
+    </div>
+</header>
+<section>
+    <div class="account-card">
+        <h1>My Profile</h1>
+        <img id="profileAvatar" src="images/default-avatar.png" alt="Profile image">
+        <p id="userInfo">Loading...</p>
+        <form class="upload-form" action="/upload-avatar" method="POST" enctype="multipart/form-data">
+            <label for="avatar">Choose profile image:</label>
+            <label for="avatar" class="custom-upload"> Choose File</label>
+            <input type="file" name="avatar" id="avatar" accept="image/*" required hidden>
+            <br>
+            <button type="submit">Upload Avatar</button>
+        </form>
+        <button id="logoutBtn">Logout</button>
+        <a href="index.html" class="homeBtn">Return Home</a>
+    </div>
+</section>
+<script>
+fetch("/profile")
+    .then(res => {
+        if (!res.ok) {
+            window.location.href = "login.html";
+        }
+        return res.json();
+    })
+    .then(user => {
+        document.getElementById("userInfo").innerText = "Login as: " + user.email;
+
+        if (user.avatar) {
+            document.getElementById("profileAvatar").src = user.avatar;
+        }
+    });
+const logoutBtn = document.getElementById("logoutBtn");
+logoutBtn.addEventListener("click", async () => {
+    await fetch("/logout", {
+        method: "POST"
+    });
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("userEmail");
+    window.location.href = "index.html";
+});
+</script>
+</body>
+</html>

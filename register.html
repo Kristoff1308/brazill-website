@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Discover Brazil</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<div class="register-container">
+    <h1>Create Account</h1>
+    <form id="registerForm">
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+       <div class="password-box">
+    <input type="password" id="password" placeholder="Password" required>
+    <span id="togglePassword">Show</span>
+</div>
+<div class="password-box">
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+    <span id="toggleConfirmPassword">Show</span>
+</div>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+</div>
+<section class="return-home-section">
+    <a href="index.html" class="return-home-btn"> Return Home</a>
+</section>
+<script src="js/register.js"></script>
+</body>
+</html>

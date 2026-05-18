@@ -1,0 +1,147 @@
+*{
+    box-sizing:border-box;
+}
+html, body{
+    margin:0;
+    min-height:100%;
+    overflow-x:hidden;
+    color: #000000;
+}
+body{
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    background:
+    linear-gradient(rgba(44,44,44,0.75), rgba(19,18,18,0.75)),
+    url("../images/lightning.jpg");
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+}
+.gallery{
+    min-height:100vh;
+    padding:50px 40px;
+    box-sizing:border-box;
+}
+.gallery h1{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #357907;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.gallery-container{
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    overflow:hidden;
+}
+.gallery-item{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.gallery-item:hover{
+    box-shadow: 0 12px 25px rgba(0,0,0,0.45);
+}
+.gallery-item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.gallery-item:hover img{
+    transform: scale(1.05);
+}
+.lightbox{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+.lightbox-img{
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.close-btn{
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.close-btn:hover{
+    color: #00c853;
+    transform: scale(1.1);
+}
+@media(max-width: 768px){
+    .gallery{
+        padding: 40px 20px;
+    }
+    .gallery h1{
+        font-size: 2rem;
+    }
+    .gallery-container{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+    }
+    .gallery-item img{
+        height: 160px;
+    }
+}
+.return-home-section {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.return-home-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 35px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+.return-home-btn:hover {
+    background: #ffffff;
+    color: #000000;
+    transform:translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+.region-title{
+    max-width:1200px;
+    margin-top:90px;
+    margin-bottom:25px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.8rem;
+    font-weight:bold;
+    color:#38e6ec;
+    letter-spacing:1px;
+    text-align:center;
+}

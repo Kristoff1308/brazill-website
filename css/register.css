@@ -1,0 +1,94 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:url("../images/ptak.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+.register-container{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    width:350px;
+    text-align:center;
+}
+.register-container h1{
+    margin-bottom:20px;
+}
+.register-container form{
+    display:flex;
+    flex-direction:column;
+}
+.register-container input{
+    margin:10px 0;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+.register-container button{
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    background:#009739;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.register-container button:hover{
+    background:#007a2f;
+}
+.password-box{
+    position:relative;
+}
+.password-box input{
+    width:100%;
+    box-sizing:border-box;
+}
+.password-box span{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#009739;
+    font-size:14px;
+    font-weight:bold;
+}
+.return-home-section {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.return-home-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 35px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+.return-home-btn:hover {
+    background: #ffffff;
+    color: #000000;
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}

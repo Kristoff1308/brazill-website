@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('../images/brazill13.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header {
+    background-color:none;
+    padding: 20px 0;
+    text-align: center;
+}
+.contact-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.contact-form {
+    width: 100%;
+    max-width: 380px;
+
+    padding: 30px;
+    border-radius: 12px;
+
+    background: rgba(241, 238, 238, 0.55);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+.form-control {
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+
+    padding: 8px;
+    font-size: 14px;
+
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.btn-submit {
+    background-color: #006400;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn-submit:hover {
+    background-color: #004d26;
+}
+.return-home-section {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.return-home-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 35px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+.return-home-btn:hover {
+    background: #ffffff;
+    color: #000000;
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+.error {
+    color: #b90a0a;
+    font-size: 0.9em;
+}
+.success-msg {
+    text-align: center;
+    color: lightgreen;
+    margin-top: 15px;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s ease;
+}
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+.popup-content {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+
+    transform: scale(0.8);
+    opacity: 0;
+
+    transition: all 0.3s ease;
+}
+.popup.show .popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+.popup-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-size: 13px;
+}

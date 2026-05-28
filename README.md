@@ -1,4 +1,4 @@
-# Brazill Website 🇧🇷
+# Brazil Tourism Website
 
 A full-stack website project about Brazil built with HTML, CSS, JavaScript, Node.js and Express.
 

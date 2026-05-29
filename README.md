@@ -18,7 +18,7 @@ A full-stack website project about Brazil built with HTML, CSS, JavaScript, Node
 
 ### Contact Us
 
-![Contact Us](screenshots/ContactUs.png)
+![Contact Us](screenshots/CountactUs.png)
 
 ## Features
 - User Registration & Login

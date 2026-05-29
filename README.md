@@ -22,5 +22,11 @@ A full-stack website project about Brazil built with HTML, CSS, JavaScript, Node
 ## Live Demo
 [brazill-website-production.up.railway.app](https://brazill-website-production.up.railway.app)
 
+## Demo Video
+
+🎥 Watch the project demo:
+
+https://youtu.be/5s_8MQK4ZIM
+
 ## Author
 Krzysztof Kaminski

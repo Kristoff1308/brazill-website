@@ -2,6 +2,24 @@
 
 A full-stack website project about Brazil built with HTML, CSS, JavaScript, Node.js and Express.
 
+## Project Preview
+
+### Home Page
+
+![Home Page](screenshots/homePage.png)
+
+### Create Account
+
+![Create Account](screenshots/CreateAccount.png)
+
+### About Brazil
+
+![About Brazil](screenshots/AboutBrazil.png)
+
+### Contact Us
+
+![Contact Us](screenshots/ContactUs.png)
+
 ## Features
 - User Registration & Login
 - Avatar Upload System

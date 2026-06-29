@@ -42,7 +42,7 @@ A full-stack website project about Brazil built with HTML, CSS, JavaScript, Node
 
 ## Demo Video
 
-🎥 Watch the project demo:
+ Watch the project demo:
 
 https://youtu.be/5s_8MQK4ZIM
 
